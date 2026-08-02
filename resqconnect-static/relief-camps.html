@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relief Camp Locator — ResQConnect</title>
+  <meta name="description" content="Find active relief camps near you, with live capacity and available resources." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="alert-ribbon" role="status" aria-label="Active disaster alerts">
+    <div class="alert-ribbon__label">
+      <span class="pulse" aria-hidden="true"></span>
+      <span class="txt"><span id="ribbonCount">4</span> Active Alerts</span>
+    </div>
+    <div class="alert-ribbon__track" id="ribbonTrack">
+      <ul></ul>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo__mark">R</span>ResQConnect</a>
+      <nav id="navLinks" class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="safety.html">Safety</a>
+        <a href="relief-camps.html">Relief Camps</a>
+        <a href="contacts.html">Emergency Contacts</a>
+        <a href="donate.html">Donate</a>
+        <a href="volunteer-registration.html">Volunteer</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+        <a href="alerts.html#report" class="btn btn-emergency btn-sm">Report Emergency</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Find shelter</div>
+        <h1>Relief Camp Locator</h1>
+        <p style="max-width:560px;">72 camps are currently active nationwide. Capacity updates every time a camp logs an arrival or departure.</p>
+      </div>
+    </section>
+    <section class="section-tight">
+      <div class="container" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:start;">
+        <div class="map-placeholder" aria-label="Map showing relief camp locations">
+          <div class="map-pin" style="top:30%;left:40%;"></div>
+          <div class="map-pin" style="top:55%;left:60%;background:var(--amber);"></div>
+          <div class="map-pin" style="top:70%;left:30%;background:var(--teal);"></div>
+          <div class="map-pin" style="top:20%;left:70%;background:var(--teal);"></div>
+        </div>
+        <div class="grid" style="gap:16px;">
+          <div class="card">
+            <div class="flex justify-between items-center" style="margin-bottom:8px;">
+              <h3 style="margin:0;font-size:15.5px;">Andheri West Community Camp</h3>
+              <span class="badge badge-warning">Nearly Full</span>
+            </div>
+            <p style="margin-bottom:10px;font-size:13.5px;">Mumbai, Maharashtra</p>
+            <div class="flex justify-between" style="font-size:12.5px;color:var(--ink-faint);margin-bottom:4px;">
+              <span>Capacity</span><span>412/450</span>
+            </div>
+            <div class="progress" style="margin-bottom:12px;"><div class="progress__fill " data-fill="91"></div></div>
+            <p style="margin:0;font-size:13px;"><strong>Available:</strong> Food, water, medical aid</p>
+          </div>
+          <div class="card">
+            <div class="flex justify-between items-center" style="margin-bottom:8px;">
+              <h3 style="margin:0;font-size:15.5px;">Bandra Relief Shelter</h3>
+              <span class="badge badge-success">Open</span>
+            </div>
+            <p style="margin-bottom:10px;font-size:13.5px;">Mumbai, Maharashtra</p>
+            <div class="flex justify-between" style="font-size:12.5px;color:var(--ink-faint);margin-bottom:4px;">
+              <span>Capacity</span><span>180/400</span>
+            </div>
+            <div class="progress" style="margin-bottom:12px;"><div class="progress__fill low" data-fill="45"></div></div>
+            <p style="margin:0;font-size:13px;"><strong>Available:</strong> Food, water, bedding, medical aid</p>
+          </div>
+          <div class="card">
+            <div class="flex justify-between items-center" style="margin-bottom:8px;">
+              <h3 style="margin:0;font-size:15.5px;">Puri Coastal Camp</h3>
+              <span class="badge badge-success">Open</span>
+            </div>
+            <p style="margin-bottom:10px;font-size:13.5px;">Puri, Odisha</p>
+            <div class="flex justify-between" style="font-size:12.5px;color:var(--ink-faint);margin-bottom:4px;">
+              <span>Capacity</span><span>95/600</span>
+            </div>
+            <div class="progress" style="margin-bottom:12px;"><div class="progress__fill low" data-fill="15"></div></div>
+            <p style="margin:0;font-size:13px;"><strong>Available:</strong> Food, water, cyclone shelter</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">All camps</div>
+          <h2>Full camp directory</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Camp</th><th>Location</th><th>Capacity</th><th>Status</th><th>Contact</th></tr></thead>
+            <tbody>
+              <tr><td>Andheri West Community Camp</td><td>Mumbai, MH</td><td>412/450</td><td><span class="badge badge-warning">Nearly Full</span></td><td class="mono">+91 22 4000 1122</td></tr>
+              <tr><td>Bandra Relief Shelter</td><td>Mumbai, MH</td><td>180/400</td><td><span class="badge badge-success">Open</span></td><td class="mono">+91 22 4000 1187</td></tr>
+              <tr><td>Puri Coastal Camp</td><td>Puri, OD</td><td>95/600</td><td><span class="badge badge-success">Open</span></td><td class="mono">+91 674 220 3312</td></tr>
+              <tr><td>Nainital Ridge Camp</td><td>Nainital, UK</td><td>40/150</td><td><span class="badge badge-success">Open</span></td><td class="mono">+91 5942 235 001</td></tr>
+              <tr><td>Patna Riverside Camp</td><td>Patna, BR</td><td>260/300</td><td><span class="badge badge-warning">Nearly Full</span></td><td class="mono">+91 612 220 4477</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:#fff;"><span class="logo__mark">R</span>ResQConnect</a>
+          <p>A disaster response &amp; relief management platform connecting citizens, volunteers, NGOs, rescue teams, and administrators.</p>
+        </div>
+        <div>
+          <h4>Platform</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="alerts.html">Disaster Alerts</a>
+          <a href="safety.html">Safety Guidelines</a>
+        </div>
+        <div>
+          <h4>Get Involved</h4>
+          <a href="volunteer-registration.html">Volunteer</a>
+          <a href="donate.html">Donate</a>
+          <a href="register.html">Create Account</a>
+          <a href="login.html">Log In</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="relief-camps.html">Relief Camps</a>
+          <a href="contacts.html">Emergency Contacts</a>
+          <a href="citizen-missing.html">Missing Persons</a>
+        </div>
+        <div>
+          <h4>Roles</h4>
+          <a href="citizen-dashboard.html">Citizen</a>
+          <a href="volunteer-dashboard.html">Volunteer</a>
+          <a href="ngo-dashboard.html">NGO</a>
+          <a href="rescue-dashboard.html">Rescue Team</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> ResQConnect. Built for resilience.</span>
+        <span class="footer-emergency mono">Emergency Helpline: 108</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
